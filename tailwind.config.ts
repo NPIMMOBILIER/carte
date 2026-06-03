@@ -8,11 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#111111',
-        accent: '#0066FF',
+        primary: '#16243F',
+        accent: '#B89B6E',
+        cream: '#F4F1EA',
+        banner1: '#EDEAE3',
+        banner2: '#DAD3C2',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'serif'],
       },
     },
   },
