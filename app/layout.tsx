@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${profile.siteUrl}/logo.png`,
-        width: 512,
-        height: 512,
+        width: 560,
+        height: 357,
         alt: profile.company,
       },
     ],
