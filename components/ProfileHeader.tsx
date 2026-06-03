@@ -11,11 +11,11 @@ export function ProfileHeader() {
 
       {/* Avatar : logo NP en image, aligné à gauche, débordant */}
       <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-6">
-        <div className="h-[88px] w-[140px] overflow-hidden rounded-2xl border-4 border-accent bg-cream shadow-lg">
+        <div className="h-[88px] w-[140px] overflow-hidden rounded-2xl border-4 border-accent bg-[#e8e4e2] shadow-lg">
           <img
             src={`${base}/logo.png`}
             alt="NP IMMOBILIER"
-            className="h-full w-full object-contain p-1.5"
+            className="h-full w-full object-contain"
           />
         </div>
       </div>
