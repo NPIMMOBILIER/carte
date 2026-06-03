@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { profile } from '@/config/profile'
 
-// Police auto-hébergée par Next (pas de requête bloquante vers Google Fonts)
-// — meilleur score Lighthouse que l'@import CSS.
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-playfair',
   display: 'swap',
 })
 
@@ -21,19 +27,19 @@ export const metadata: Metadata = {
     siteName: profile.company,
     images: [
       {
-        url: `${profile.siteUrl}/photo.jpg`,
-        width: 400,
-        height: 400,
-        alt: profile.name,
+        url: `${profile.siteUrl}/logo.png`,
+        width: 512,
+        height: 512,
+        alt: profile.company,
       },
     ],
     type: 'profile',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: `${profile.name} — ${profile.title}`,
     description: profile.description,
-    images: [`${profile.siteUrl}/photo.jpg`],
+    images: [`${profile.siteUrl}/logo.png`],
   },
 }
 
@@ -58,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={inter.className}>
+    <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
@@ -66,7 +72,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }
