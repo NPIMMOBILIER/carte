@@ -22,7 +22,7 @@ export function ProfileInfo() {
       animate="show"
     >
       <motion.h1
-        className="text-2xl font-extrabold text-primary"
+        className="font-serif text-2xl font-bold text-primary"
         variants={item}
       >
         {profile.name}
