@@ -20,20 +20,20 @@ export function NfcDetectedOverlay() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-primary/90 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className="flex flex-col items-center gap-3 text-white"
+            className="flex flex-col items-center gap-3 text-cream"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
           >
             <motion.div
-              className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/50 text-3xl"
+              className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-accent text-3xl text-accent"
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ repeat: Infinity, duration: 0.8 }}
             >
