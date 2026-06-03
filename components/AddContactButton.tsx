@@ -14,14 +14,14 @@ export function AddContactButton() {
       email: profile.email,
       website: profile.website,
     })
-    downloadVCard(vcf, 'filipe-taveira.vcf')
+    downloadVCard(vcf, 'damien-pignat.vcf')
   }
 
   return (
     <div className="mt-4 px-6">
       <button
         onClick={handleClick}
-        className="flex w-full items-center justify-center gap-3 rounded-2xl bg-accent px-6 py-4 text-white shadow-md transition-transform active:scale-95 hover:bg-blue-600"
+        className="flex w-full items-center justify-center gap-3 rounded-2xl bg-primary px-6 py-4 text-white shadow-md transition-transform active:scale-95 hover:opacity-90"
       >
         <UserPlus size={20} />
         <span className="text-sm font-bold tracking-wide">Ajouter à mes contacts</span>
