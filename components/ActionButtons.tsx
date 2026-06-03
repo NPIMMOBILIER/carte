@@ -3,13 +3,11 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, Globe } from 'lucide-react'
 import { profile } from '@/config/profile'
-import { LinkedInIcon } from '@/components/BrandIcons'
 
 const buttons = [
   { label: 'Appeler', href: `tel:${profile.phone}`, icon: Phone },
   { label: 'Email', href: `mailto:${profile.email}`, icon: Mail },
   { label: 'Site web', href: profile.website, icon: Globe },
-  { label: 'LinkedIn', href: profile.linkedin, icon: LinkedInIcon },
 ]
 
 const container = {
@@ -37,9 +35,9 @@ export function ActionButtons() {
           target={href.startsWith('http') ? '_blank' : undefined}
           rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
           variants={item}
-          className="flex items-center gap-4 rounded-2xl bg-primary px-5 py-4 text-white shadow-sm transition-colors hover:bg-accent active:scale-95"
+          className="flex items-center gap-4 rounded-2xl border border-accent bg-white px-5 py-4 text-primary shadow-sm transition-colors hover:bg-cream active:scale-95"
         >
-          <Icon size={20} className="shrink-0" />
+          <Icon size={20} className="shrink-0 text-accent" />
           <span className="text-sm font-semibold">{label}</span>
         </motion.a>
       ))}
