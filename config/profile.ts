@@ -1,26 +1,22 @@
 export const profile = {
   // Identité
-  name: 'Filipe Taveira',
-  title: 'Fondateur',
-  company: 'Interlo',
+  name: 'Damien Pignat',
+  title: 'Gérant',
+  company: 'NP IMMOBILIER',
   description:
-    'J\'accompagne les copropriétés et les PME du bâtiment en offrant des services de digitalisation innovants.',
+    'Syndic de copropriété — gestion administrative, financière et technique de votre immeuble, au quotidien.',
 
   // Contact
-  phone: '+33652837639',
-  email: 'filipe@interlo.pro',
-  website: 'https://interlo.fr',
-
-  // Réseaux sociaux
-  linkedin: 'https://www.linkedin.com/company/116064201',
-  whatsapp: 'https://wa.me/33652837639',
+  phone: '+33978250645',
+  email: 'd.pignat@np.immo',
+  website: 'https://www.np-immobilier.fr',
 
   // URL du profil (injectée depuis la variable d'environnement)
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
 
   // Contenu entreprise
   aboutCompany:
-    'Interlo accompagne les copropriétés et les PME du bâtiment dans leur transformation digitale. Nous concevons des services innovants pour simplifier la gestion des interventions, des travaux et de la relation client.',
+    'NP IMMOBILIER est un syndic de copropriété à taille humaine. Nous assurons la gestion administrative, financière et technique de votre immeuble avec réactivité et transparence, pour préserver la valeur de votre patrimoine.',
 } as const
 
 export type Profile = typeof profile
